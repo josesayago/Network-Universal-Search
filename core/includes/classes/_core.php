@@ -55,7 +55,8 @@ class NETUNSE_Core {
      */
     public function NETUNSE_Core() {
         $defaults = apply_filters( 'netunse_custom_defaults', array(
-            'results_title'  => 'Search Results',
+            'results_title'     => 'Search Results',
+            'paginate'          => 'yes',
         ) );
     }
 }
