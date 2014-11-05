@@ -54,7 +54,7 @@ class NETUNSE_Config {
         if( !defined( 'NETUNSE_THEMES_PATH'    ) ) define( 'NETUNSE_THEMES_PATH',      $wp_upload_dir['basedir'].'/'. NETUNSE_THEMES_FOLDER .'/',   true );
         if( !defined( 'NETUNSE_CORE'           ) ) define( 'NETUNSE_CORE',             NETUNSE_ROOT . '/core/',                                     true );
         if( !defined( 'NETUNSE_INCLUDES'       ) ) define( 'NETUNSE_INCLUDES',         NETUNSE_CORE . 'includes/',                                  true );
-        if( !defined( 'NETUNSE_FUNCTIONS'      ) ) define( 'NETUNSE_FUNCTIONS',        NETUNSE_CORE . 'includes/functions/',                        true );
+        if( !defined( 'NETUNSE_CLASSES'        ) ) define( 'NETUNSE_CLASSES',          NETUNSE_CORE . 'includes/classes/',                          true );
         if( !defined( 'NETUNSE_STYLES'         ) ) define( 'NETUNSE_STYLES',           NETUNSE_CORE . 'includes/styles/',                           true );
         if( !defined( 'NETUNSE_LIBRARIES'      ) ) define( 'NETUNSE_LIBRARIES',        NETUNSE_CORE . 'libraries/',                                 true );
         if( !defined( 'NETUNSE_JS'             ) ) define( 'NETUNSE_JS',               NETUNSE_CORE . 'libraries/js/',                              true );
@@ -65,13 +65,24 @@ class NETUNSE_Config {
          */
         if( !defined( 'NETUNSE_CORE_REL'       ) ) define( 'NETUNSE_CORE_REL',         'core/',                                                     true );
         if( !defined( 'NETUNSE_INCLUDES_REL'   ) ) define( 'NETUNSE_INCLUDES_REL',     'includes/',                                                 true );
-        if( !defined( 'NETUNSE_FUNCTIONS_REL'  ) ) define( 'NETUNSE_FUNCTIONS_REL',    'includes/functions/',                                       true );
+        if( !defined( 'NETUNSE_CLASSES_REL'    ) ) define( 'NETUNSE_CLASSES_REL',      'includes/classes/',                                         true );
         if( !defined( 'NETUNSE_STYLES_REL'     ) ) define( 'NETUNSE_STYLES_REL',       'includes/styles/',                                          true );
         if( !defined( 'NETUNSE_LIBRARIES_REL'  ) ) define( 'NETUNSE_LIBRARIES_REL',    'libraries/',                                                true );
         if( !defined( 'NETUNSE_JS_REL'         ) ) define( 'NETUNSE_JS_REL',           'libraries/js/',                                             true );
         if( !defined( 'NETUNSE_LANGUAGES_REL'  ) ) define( 'NETUNSE_LANGUAGES_REL',    'languages/',                                                true );
         if( !defined( 'NETUNSE_THEMES_REL'     ) ) define( 'NETUNSE_THEMES_REL',       'themes/',                                                   true );
         if( !defined( 'NETUNSE_THEMES_PATH_REL') ) define( 'NETUNSE_THEMES_PATH_REL',  $wp_upload_dir['baseurl'].'/'. NETUNSE_THEMES_FOLDER .'/',   true );
+
+        /**
+         * Set Upload Folder
+         */
+        if( !is_dir( NETUNSE_THEMES_PATH ) ) {
+            // Check if folder exists
+            if ( !is_dir( NETUNSE_THEMES_PATH ) ) {
+                // Create folder
+                wp_mkdir_p( NETUNSE_THEMES_PATH );
+            }
+        }
     }
 }
 ?>
