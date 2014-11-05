@@ -72,7 +72,8 @@ class NETUNSE_Config {
         if( !defined( 'NETUNSE_LANGUAGES_REL'  ) ) define( 'NETUNSE_LANGUAGES_REL',    'languages/',                                                true );
         if( !defined( 'NETUNSE_THEMES_REL'     ) ) define( 'NETUNSE_THEMES_REL',       'themes/',                                                   true );
         if( !defined( 'NETUNSE_THEMES_PATH_REL') ) define( 'NETUNSE_THEMES_PATH_REL',  $wp_upload_dir['baseurl'].'/'. NETUNSE_THEMES_FOLDER .'/',   true );
-
+        // Load textdomain and strings
+        require_once NETUNSE_CLASSES  . '_phrases.php';
         /**
          * Set Upload Folder
          */

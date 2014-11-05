@@ -54,9 +54,15 @@ class NETUNSE_Core {
      * @return array $default Default parameters
      */
     public function NETUNSE_Core() {
+        $strings = new NETUNSE_Phrases();
         $defaults = apply_filters( 'netunse_custom_defaults', array(
-            'results_title'     => 'Search Results',
+            'results_title'     => $strings->core->()->results_title,
             'paginate'          => 'yes',
+            'blog_include'      => 'all',
+            'blog_exclude'      => 'none',
+            'author_include'    => 'all',
+            'author_exclude'    => 'none',
+
         ) );
     }
 }
