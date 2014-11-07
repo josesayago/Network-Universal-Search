@@ -56,14 +56,23 @@ class NETUNSE_Core {
     public function NETUNSE_Core() {
         $strings = new NETUNSE_Phrases();
         $defaults = apply_filters( 'netunse_custom_defaults', array(
-            'results_title'     => $strings->core->()->results_title,
+            'results_title'     => $strings->core()->results_title,
             'paginate'          => 'yes',
             'blog_include'      => 'all',
             'blog_exclude'      => 'none',
             'author_include'    => 'all',
             'author_exclude'    => 'none',
-
+            'stopwords'         => $strings->core()->stopwords,
         ) );
+    }
+    protected function NETUNSE_stopwords( $data ) {
+        $words = explode(',', $data);
+        $stopwords = array();
+        foreach( $words as $word ) {
+            $word = trim( $word, "\r\n\t " );
+            if ( $word )
+                $stopwords[] = $word;
+        }
     }
 }
 ?>

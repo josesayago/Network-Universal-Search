@@ -47,7 +47,8 @@ class NETUNSE_Phrases {
     public function core() {
         // Phrases
         $phrases = apply_filters( 'netunse_custom_core_phrase', array(
-            'results_title'      => __( '&hellip;',  NETUNSE_TEXTDOMAIN ),
+            'results_title'     => __( 'Search Results',  NETUNSE_TEXTDOMAIN ),
+            'stopwords'         => __( 'about,an,are,as,at,be,by,com,for,from,how,in,is,it,of,on,or,that,the,this,to,was,what,when,where,who,will,with,www', NETUNSE_TEXTDOMAIN ),
         ) );
         /**
          * WPML Support
