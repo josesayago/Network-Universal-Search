@@ -3,7 +3,7 @@
  * Network Universal Search
  *
  * @package Network Universal Search
- * @author José SAYAGO <jose.sayago@laelite.info>
+ * @author Jose SAYAGO <jose.sayago@laelite.info>
  * @internal _phrases.php
  *
  * Phrases
@@ -11,7 +11,7 @@
  */
 /*  LICENSE
 
-    Copyright (C) 2007 - 2014  L'Elite de José SAYAGO
+    Copyright (C) 2007 - 2015  L'Elite
 
     'Network Universal Search' is an unregistered trademark of L'Elite, 
     and cannot be re-used in conjunction with the GPL v2 usage of this 

@@ -3,7 +3,7 @@
  * Network Universal Search
  *
  * @package Network Universal Search
- * @author José SAYAGO <jose.sayago@laelite.info>
+ * @author Jose SAYAGO <jose.sayago@laelite.info>
  * @internal _core.php
  *
  * Core
@@ -11,7 +11,7 @@
  */
 /*  LICENSE
 
-    Copyright (C) 2007 - 2014  L'Elite de José SAYAGO
+    Copyright (C) 2007 - 2015  L'Elite
 
     'Network Universal Search' is an unregistered trademark of L'Elite, 
     and cannot be re-used in conjunction with the GPL v2 usage of this 
@@ -58,13 +58,24 @@ class NETUNSE_Core {
         $defaults = apply_filters( 'netunse_custom_defaults', array(
             'results_title'     => $strings->core()->results_title,
             'paginate'          => 'yes',
+            'results_per_page'  => 10,
             'blog_include'      => 'all',
             'blog_exclude'      => 'none',
             'author_include'    => 'all',
             'author_exclude'    => 'none',
+            'category_include'  => 'all',
+            'category_exclude'  => 'none',
+            'tag_include'       => 'all',
+            'tag_exclude'       => 'none',
             'stopwords'         => $strings->core()->stopwords,
         ) );
     }
+    public function NETUNSE_Query( query_terms ) {
+        
+    }
+    /**
+     * 
+     */
     protected function NETUNSE_stopwords( $data ) {
         $words = explode(',', $data);
         $stopwords = array();

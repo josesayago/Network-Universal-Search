@@ -4,12 +4,12 @@ Plugin Name: Network Universal Search
 Plugin URI: http://laelitestore.com/network-universal-search
 Description: 
 Version: 1.0
-Author: Jose Luis SAYAGO
+Author: Jose SAYAGO
 Author URI: http://laelite.info/
  */
 /*  LICENSE
 
-    Copyright (C) 2007 - 2014  L'Elite de José SAYAGO
+    Copyright (C) 2007 - 2015  L'Elite
 
     'Network Universal Search' is an unregistered trademark of L'Elite, 
     and cannot be re-used in conjunction with the GPL v2 usage of this 
